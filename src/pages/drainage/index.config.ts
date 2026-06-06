@@ -1,3 +1,3 @@
-export default definePageConfig({
+export default {
   navigationBarTitleText: '排水进展'
-});
+};

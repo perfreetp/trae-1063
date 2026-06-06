@@ -1,5 +1,5 @@
-export default definePageConfig({
+export default {
   navigationBarTitleText: '城市内涝服务',
   enablePullDownRefresh: true,
   backgroundTextStyle: 'dark'
-});
+};

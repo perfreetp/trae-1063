@@ -87,7 +87,7 @@ const HomePage: React.FC = () => {
         <FunctionGrid />
 
         {topRumor && (
-          <View className={styles.rumorBanner} onClick={() => Taro.navigateTo({ url: '/pages/message/index' })}>
+          <View className={styles.rumorBanner} onClick={() => Taro.switchTab({ url: '/pages/message/index' })}>
             <Text className={styles.icon}>📢</Text>
             <View className={styles.content}>
               <Text className={styles.title}>官方辟谣</Text>

@@ -31,14 +31,27 @@ interface FunctionGridProps {
   functions?: FunctionItem[][];
 }
 
+const tabBarPages = [
+  '/pages/home/index',
+  '/pages/map/index',
+  '/pages/report/index',
+  '/pages/message/index',
+  '/pages/mine/index'
+];
+
 const FunctionGrid: React.FC<FunctionGridProps> = ({ functions = defaultFunctions }) => {
   const handleItemClick = (item: FunctionItem) => {
-    if (item.path) {
-      Taro.navigateTo({ url: item.path }).catch(() => {
-        Taro.switchTab({ url: item.path }).catch((err) => {
-          console.error('[FunctionGrid] 导航失败', err);
-        });
-      });
+    if (!item.path) return;
+    
+    try {
+      if (tabBarPages.includes(item.path)) {
+        Taro.switchTab({ url: item.path });
+      } else {
+        Taro.navigateTo({ url: item.path });
+      }
+    } catch (err) {
+      console.error('[FunctionGrid] 导航失败', err);
+      Taro.showToast({ title: '跳转失败', icon: 'none' });
     }
   };
 
