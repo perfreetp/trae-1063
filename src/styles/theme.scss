@@ -1,0 +1,38 @@
+// ============================================
+// 城市内涝公众服务小程序 - 主题配色变量
+// ============================================
+
+// 品牌主题色：蓝色系，代表水、安全、信任
+$color-primary: #1E88E5;
+$color-primary-light: #42A5F5;
+$color-primary-dark: #1565C0;
+$color-primary-gradient: linear-gradient(135deg, #1E88E5 0%, #42A5F5 100%);
+
+// 功能色
+$color-success: #66BB6A;
+$color-warning: #FF7043;
+$color-danger: #EF5350;
+$color-info: #1E88E5;
+$color-safe: #26A69A;
+
+// 积水深度等级色
+$color-water-low: #66BB6A;
+$color-water-medium: #FFA726;
+$color-water-high: #EF5350;
+
+// 背景色
+$color-bg-page: #F5F9FF;
+$color-bg-card: #ffffff;
+$color-bg-hover: #E3F2FD;
+$color-bg-gradient: linear-gradient(180deg, #E3F2FD 0%, #F5F9FF 100%);
+
+// 文本色
+$color-text-primary: #1A1A2E;
+$color-text-secondary: #4A5568;
+$color-text-tertiary: #A0AEC0;
+$color-text-disabled: #CBD5E0;
+$color-text-white: #ffffff;
+
+// 边框色
+$color-border: #E2E8F0;
+$color-divider: #EDF2F7;

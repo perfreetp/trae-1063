@@ -1,0 +1,74 @@
+@use '@/styles/variables.scss' as *;
+
+.grid {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg 0;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: $spacing-lg;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+.icon {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-sm;
+  font-size: 40rpx;
+
+  &.blue {
+    background: linear-gradient(135deg, rgba(30, 136, 229, 0.15) 0%, rgba(66, 165, 245, 0.15) 100%);
+    color: $color-primary;
+  }
+
+  &.green {
+    background: linear-gradient(135deg, rgba(102, 187, 106, 0.15) 0%, rgba(76, 175, 80, 0.15) 100%);
+    color: $color-success;
+  }
+
+  &.orange {
+    background: linear-gradient(135deg, rgba(255, 112, 67, 0.15) 0%, rgba(255, 152, 0, 0.15) 100%);
+    color: $color-warning;
+  }
+
+  &.red {
+    background: linear-gradient(135deg, rgba(239, 83, 80, 0.15) 0%, rgba(244, 67, 54, 0.15) 100%);
+    color: $color-danger;
+  }
+
+  &.teal {
+    background: linear-gradient(135deg, rgba(38, 166, 154, 0.15) 0%, rgba(0, 150, 136, 0.15) 100%);
+    color: $color-safe;
+  }
+}
+
+.label {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  font-weight: $font-weight-medium;
+}

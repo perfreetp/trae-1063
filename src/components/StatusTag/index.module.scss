@@ -1,0 +1,57 @@
+@use '@/styles/variables.scss' as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rpx 16rpx;
+  border-radius: $radius-sm;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  white-space: nowrap;
+
+  &.blue {
+    background-color: rgba(30, 136, 229, 0.1);
+    color: $color-primary;
+  }
+
+  &.yellow {
+    background-color: rgba(255, 167, 38, 0.15);
+    color: #F59E0B;
+  }
+
+  &.orange {
+    background-color: rgba(255, 112, 67, 0.15);
+    color: $color-warning;
+  }
+
+  &.red {
+    background-color: rgba(239, 83, 80, 0.15);
+    color: $color-danger;
+  }
+
+  &.green {
+    background-color: rgba(102, 187, 106, 0.15);
+    color: $color-success;
+  }
+
+  &.gray {
+    background-color: rgba(160, 174, 192, 0.15);
+    color: $color-text-tertiary;
+  }
+
+  &.waterLow {
+    background-color: rgba(102, 187, 106, 0.15);
+    color: $color-water-low;
+  }
+
+  &.waterMedium {
+    background-color: rgba(255, 167, 38, 0.15);
+    color: $color-water-medium;
+  }
+
+  &.waterHigh {
+    background-color: rgba(239, 83, 80, 0.15);
+    color: $color-water-high;
+  }
+}

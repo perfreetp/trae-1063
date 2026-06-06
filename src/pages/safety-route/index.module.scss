@@ -1,0 +1,281 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+}
+
+.container {
+  padding: $spacing-md $page-padding;
+}
+
+.tipCard {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+
+  .title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: #2E7D32;
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 8rpx;
+    }
+  }
+
+  .content {
+    font-size: $font-size-sm;
+    color: #388E3C;
+    line-height: $line-height-normal;
+  }
+}
+
+.section {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    margin-right: 8rpx;
+  }
+}
+
+.routeCard {
+  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+
+  .routeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: $spacing-md;
+  }
+
+  .routeName {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-primary-dark;
+    margin-bottom: 4rpx;
+  }
+
+  .routeTime {
+    font-size: $font-size-sm;
+    color: $color-primary;
+  }
+
+  .routeTag {
+    padding: 8rpx 16rpx;
+    background: $color-primary;
+    color: #fff;
+    font-size: $font-size-xs;
+    border-radius: $radius-sm;
+  }
+
+  .routePoints {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  .routePoint {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    .dot {
+      width: 20rpx;
+      height: 20rpx;
+      border-radius: 50%;
+      background: $color-primary;
+      margin-right: 8rpx;
+      flex-shrink: 0;
+
+      &.start {
+        background: $color-success;
+      }
+
+      &.end {
+        background: $color-danger;
+      }
+    }
+
+    .text {
+      font-size: $font-size-sm;
+      color: $color-text-secondary;
+      @include text-ellipsis;
+      flex: 1;
+    }
+  }
+
+  .routeLine {
+    flex: 1;
+    height: 4rpx;
+    background: $color-primary;
+    opacity: 0.3;
+    margin: 0 8rpx;
+  }
+}
+
+.safetyPointCard {
+  display: flex;
+  padding: $spacing-md 0;
+  border-bottom: 1rpx solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  .icon {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: $radius-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36rpx;
+    margin-right: $spacing-md;
+    flex-shrink: 0;
+
+    &.shelter {
+      background: rgba(102, 187, 106, 0.15);
+    }
+
+    &.hospital {
+      background: rgba(239, 83, 80, 0.1);
+    }
+
+    &.supply {
+      background: rgba(255, 167, 38, 0.15);
+    }
+  }
+
+  .info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .name {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+    margin-bottom: 4rpx;
+    @include text-ellipsis;
+  }
+
+  .address {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    margin-bottom: 4rpx;
+    @include text-ellipsis;
+  }
+
+  .meta {
+    display: flex;
+    gap: $spacing-md;
+    font-size: $font-size-xs;
+    color: $color-text-tertiary;
+  }
+
+  .action {
+    align-self: center;
+    padding: 12rpx 24rpx;
+    background: $color-primary;
+    color: #fff;
+    font-size: $font-size-sm;
+    border-radius: $radius-button;
+    flex-shrink: 0;
+  }
+}
+
+.guideSection {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.guideTabs {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+  border-bottom: 1rpx solid $color-divider;
+  padding-bottom: $spacing-md;
+}
+
+.guideTab {
+  padding: 8rpx 24rpx;
+  border-radius: $radius-button;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  background: $color-bg-page;
+
+  &.active {
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+.guideContent {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+}
+
+.guideItem {
+  margin-bottom: $spacing-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .itemTitle {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+
+    .num {
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+      background: $color-primary;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-size-xs;
+      margin-right: $spacing-sm;
+      flex-shrink: 0;
+    }
+  }
+
+  .itemContent {
+    padding-left: 56rpx;
+  }
+}
